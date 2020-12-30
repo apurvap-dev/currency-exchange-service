@@ -2,10 +2,20 @@ package com.microservices.currencyexchangeservice;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity(name = "EXCHANGE_VALUE")
 public class ExchangeValue {
 	
-	private int id,port;
-	private String from, to ;
+	@Id
+	private int id;
+	private int port;
+	@Column(name = "CURRENCY_FROM")
+	private String from;
+	@Column(name = "CURRENCY_TO")
+	private String to ;
 	private BigDecimal conversionMultiple;
 	public ExchangeValue(int id, String from, String to, BigDecimal conversionMultiple) {
 		super();
