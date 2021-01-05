@@ -54,5 +54,4 @@ public class ExchangeValue {
 		return conversionMultiple;
 	}
 	
-
 }
